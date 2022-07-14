@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment
+  namespace: payment
+spec:
+  selector:
+    matchLabels:
+      app: payment
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: payment
+    spec:
+      containers:
+      - name: payment
+        image: nanajanashia/argocd-app:1.1
+        ports:
+        - containerPort: 8080
