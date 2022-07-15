@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: auth
-        image: nanajanashia/argocd-app:1.0
+        image: nanajanashia/argocd-app:1.1
         ports:
         - containerPort: 8080
